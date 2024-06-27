@@ -1,0 +1,42 @@
+{% extends 'testapp/base.html' %}
+{% block base_block %}
+<div class="container">
+    <div class="jumbotron">
+        <h1 align="center">All Employee Details</h1>
+<hr>
+{% if emp %}
+<table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">id</th>
+        <th scope="col">FirstName</th>
+        <th scope="col">LastName</th>
+        <th scope="col">Department</th>
+        <th scope="col">Salary</th>
+        <th scope="col">Bonous</th>
+        <th scope="col">Role</th>
+        <th scope="col">Phone No.</th>
+      </tr>
+    </thead>
+    <tbody>
+        {% for e in emp %}
+      <tr>
+        <th scope="row">{{e.id}}</th>
+        <td>{{e.first_name}}</td>
+        <td>{{e.last_name}}</td>
+        <td>{{e.dept}}</td>
+        <td>{{e.salary}}</td>
+        <td>{{e.bonus}}</td>
+        <td>{{e.role}}</td>
+        <td>{{e.phone}}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  {% else %}
+  <h1>No data found</h1>
+  {% endif %}
+    </div>
+</div>
+
+{% endblock %}

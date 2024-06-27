@@ -1,0 +1,40 @@
+{% extends 'testapp/base.html' %}
+{% block base_block %}
+<div class="container">
+<div class="jumbotron">
+    <h1 align="center">Add new Employee Details</h1>
+    <form  method="post">
+        <div class="form-group">
+          <label for="exampleInputEmail1">First Name</label>
+          <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="firstname">
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Last Name</label>
+          <input type="text" class="form-control" id="exampleInputPassword1" name="lastname">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1">Department</label>
+            <input type="text" class="form-control" id="exampleInputPassword1" name="dept">
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Salary</label>
+            <input type="number" class="form-control" id="exampleInputPassword1" name="salary">
+          </div>
+         <div class="form-group">
+            <label for="exampleInputPassword1">Bonus</label>
+            <input type="number" class="form-control" id="exampleInputPassword1" name="bonus">
+          </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1">Job Role</label>
+            <input type="text" class="form-control" id="exampleInputPassword1" name="role">
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Phone Number</label>
+            <input type="number" class="form-control" id="exampleInputPassword1" name="phone">
+          </div>
+          {% csrf_token %}
+        <input type="submit" value="insert Data" class="btn btn-primary">
+      </form>
+</div>
+</div>
+{% endblock %}

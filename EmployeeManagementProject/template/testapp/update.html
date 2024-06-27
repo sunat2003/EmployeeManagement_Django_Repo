@@ -1,0 +1,20 @@
+{% extends 'testapp/base.html' %}
+{% block base_block %}
+<div class="container">
+    <div class="jumbotron">
+        <h1>Update Employee</h1>
+        <hr>
+        <div class="dropdown">
+            <a class="btn btn-primary dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+              Choose Any Employee to Update
+            </a>
+            <div class="dropdown-menu">
+                {% for emp in emp_data %}
+              <a class="dropdown-item" href="/update/{{ emp.id }}">{{ emp.first_name }} {{ emp.last_name }}</a>
+              {% endfor %}
+            </div>
+          </div>
+    </div>
+</div>
+
+{% endblock %}
