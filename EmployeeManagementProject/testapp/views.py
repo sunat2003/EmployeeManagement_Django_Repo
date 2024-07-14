@@ -74,7 +74,7 @@ def update_view(request,id=0):
             form=EmployeeForm(request.POST,instance=emp)
             if form.is_valid():
                 form.save()
-                return redirect('update_view')
+                return HttpResponse("Emplyee Updated Succesfully")
         return render(request,'testapp/updateform.html',{"form":form})
     emp_data=Employee.objects.all()
     return render(request,'testapp/update.html',{"emp_data":emp_data})

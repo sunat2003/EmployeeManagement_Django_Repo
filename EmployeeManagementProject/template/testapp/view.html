@@ -16,6 +16,7 @@
         <th scope="col">Bonous</th>
         <th scope="col">Role</th>
         <th scope="col">Phone No.</th>
+        <th colspan="2" style="text-align:center;">Action</th>
       </tr>
     </thead>
     <tbody>
@@ -29,6 +30,8 @@
         <td>{{e.bonus}}</td>
         <td>{{e.role}}</td>
         <td>{{e.phone}}</td>
+        <td><a href="/remove/{{ e.id }}">Delete</a></td>
+        <td><a href="/update/{{ e.id }}">Update</a></td>
       </tr>
       {% endfor %}
     </tbody>
